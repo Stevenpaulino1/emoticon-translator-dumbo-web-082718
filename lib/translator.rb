@@ -12,8 +12,7 @@ require 'yaml'
 end	
 
 
- def get_japanese_emoticon	def get_japanese_emoticon(file, emoticon)
-  # code goes here	  # code goes here
+	def get_japanese_emoticon(file, emoticon)
   translate = load_library(file)
   if translate["get_emoticon"].has_key?(emoticon)
     jap_emoticon = translate["get_emoticon"][emoticon]
@@ -21,9 +20,9 @@ end
     jap_emoticon = "Sorry, that emoticon was not found"
   end
   jap_emoticon
-end	end
- def get_english_meaning	def get_english_meaning(file, emoticon)
-  # code goes here	  # code goes here
+end	
+
+ 	def get_english_meaning(file, emoticon)
   translate = load_library(file)
   if translate["get_meaning"].has_key?(emoticon)
     eng_emoticon = translate["get_meaning"][emoticon]
@@ -31,4 +30,4 @@ end	end
     eng_emoticon = "Sorry, that emoticon was not found"
   end
   eng_emoticon
-end 	end 
+end 
